@@ -1,0 +1,270 @@
+#----------------------------------------------------------------------
+# 1: ファンクション
+#----------------------------------------------------------------------
+
+# タイトルバーをクリック・ドラッグ・ダブルクリックした時の動作
+DestroyFunc Func-TitleMouse
+AddToFunc   Func-TitleMouse I Raise
++                           M Move
++                           D Maximize
+
+# アイコン化から最大表示
+DestroyFunc Func-Maximize
+AddToFunc   Func-Maximize
++ I Iconify off
++ I Maximize
+
+# ウィンドウリスト表示時に、マウスカーソルが移動するのを防止する
+DestroyFunc WindowListFunc
+AddToFunc WindowListFunc
++ I Iconify off
++ I Focus
++ I Raise
+
+#----------------------------------------------------------------------
+# 2: スタイル
+#----------------------------------------------------------------------
+
+# アイコンファイルの保存先
+ImagePath $HOME/icons
+
+# 仮想デスクトップを使用しない
+DeskTopSize 1x1
+
+# ウインドウをマウスでクリックしたらフォーカスする
+Style * ClickToFocus, MouseFocusClickRaises
+
+# ウインドウタイトルなどのフォント
+DefaultFont "xft:Sans:size=12"
+
+# RDP接続の際にウインドウが選択できなくなるのを防止する
+IgnoreModifiers L25
+
+# ウインドウ枠の幅
+Style * borderWidth 5, HandleWidth 5
+
+# ウインドウの見た目をMWM風にする
+Style * MWMBorder, MWMButtons, MWMdecor
+
+# デスクトップ左下に最小化したアイコンを配置する
+Style * IconBox 1 -1 -1 -1
+
+# ウインドウの配色(非アクティブ時,アクティブ時)
+Style * Colorset 1, HilightColorset 2
+
+# 各アプリケーションごとの設定
+Style "xclock" NoTitle, borderWidth 0, HandleWidth 0, WindowListSkip
+Style "mlterm" Icon xterm-sol.png
+Style *        Icon programs.png
+
+# ドラッグ中にウィンドウの内容を表示する
+OpaqueMoveSize unlimited
+Style * ResizeOpaque
+
+# ウインドウが画面からはみ出さないように調整する
+Style * MaxWindowSize 100 100
+
+# wineにおいて、ダイアログボックス表示後に元の画面にフォーカスが戻らないのを防止する
+#Style * Lenience
+
+#----------------------------------------------------------------------
+# 3: カラーセット
+#----------------------------------------------------------------------
+
+# ウインドウのカラーセットを定義する
+Colorset 1  fg #444444, bg #aeb2c3
+Colorset 2  fg #ffffff, bg #b24d7a
+
+# ルートメニューのカラーセットを定義する
+Colorset 5  fg #000000, bg #cecece
+Colorset 6  fg #000000, bg #b5b5b5
+Colorset 7  fg #888888, bg #cecece
+Colorset 8  fg #000000, bg #cecece
+
+#----------------------------------------------------------------------
+# 4: メニュー
+#----------------------------------------------------------------------
+
+# ルートメニューをMWM風にする
+MenuStyle * Mwm
+
+# ルートメニュー枠の幅
+MenuStyle * BorderWidth 1
+
+# 選択されたメニューの見た目を押された感じにする
+MenuStyle * Hilight3DThickness -1
+
+# ルートメニューのフォント
+MenuStyle * Font "xft:Sans:size=12"
+
+# ルートメニューの配色
+MenuStyle * MenuColorset 5, ActiveColorset 6, GreyedColorset 7, TitleColorset 8
+MenuStyle * HilightBack, HilightTitleBack
+
+# ルートメニューの設定
+AddToMenu RootMenu    "ワークスペース"                  Title
++                     "プログラム"                      Popup Programs
++                     "ユーティリティ"                  Popup Utilities
++                     ""                                Nop
++                     "終了..."                         Module FvwmForm QuitVerify
+
+AddToMenu Programs    "プログラム"                      Title
++                     "端末エミュレータ 80x24..."       Exec mlterm -title=端末エミュレータ
++                     "端末エミュレータ 132x24..."      Exec mlterm -geometry 132x24 -title=端末エミュレータ
++                     ""                                Nop
++                     "時計..."                         Exec xclock
++                     "電卓..."                         Exec xcalc
++                     "パフォーマンスメータ..."         Exec xterm -e top
++                     ""                                Nop
++                     "スクリーンショット..."           Exec scrot -s -b $HOME/screenshot%Y%m%d%H%M%S.png
++                     ""                                Nop
++                     "付箋..."                         Exec xpad -s
+#+                     ""                                Nop
+#+                     "リモートデスクトップ接続..."     Exec xfreerdp /u:username /p:password /size:800x600 /sound /clipboard /cert-ignore /v:192.168.1.16
+#+                     "VNCビューア..."                  Exec vncviewer
+#+                     "Telnet (シフトJIS接続)..."       Exec mlterm --km=Shift_JIS -title=Telnet\ \(シフトJIS接続\) -e telnet
++                     ""                                Nop
++                     "ウェブブラウザ..."               Exec firefox
+#+                     "ウェブブラウザ Firefox..."       Exec firefox
+#+                     "ウェブブラウザ Chromium..."      Exec chrome
+
+AddToMenu Utilities   "ユーティリティ"                  Title
++                     "再表示"                          Refresh
++                     "ウィンドウマネージャの再起動..." Restart
++                     "ロックスクリーン"                Exec xlock -mode blank -mousemotion -timeout 10
++                     "拡大鏡..."                       Exec lupe -geometry 24x24 -noshape -mag 8
++                     "文字コード表..."                 Exec firefox $HOME/html/cp932map.html
++                     "入力メソッドの設定..."           Exec uim-pref-gtk3
++                     "日本語入力システム設定..."       Exec uim-pref-gtk3
+#+                     "日本語入力システム設定..."       Exec env QT_IM_MODULE= mozc_tool config_dialog
+
+AddToMenu Window-Ops  "移動"                            Move
++                     "サイズ変更"                      Resize
++                     "アイコン化"                      Iconify
++                     "最大表示"                        Maximize
++                     "奥へ"                            Lower
++                     ""                                Nop
++                     "閉じる"                          Delete
+
+AddToMenu Window-Ops2 "復元"                            Iconify
++                     "移動"                            Move
++                     "最大表示"                        Func-Maximize
++                     "奥へ"                            Lower
++                     ""                                Nop
++                     "閉じる"                          Delete
+
+#----------------------------------------------------------------------
+# 5: マウスとキー設定
+#----------------------------------------------------------------------
+
+# タイトルバーの各ボタンをマウスで左クリックした時の動作
+Mouse 1 1 A Menu Window-Ops Close
+Mouse 1 2 A Close
+Mouse 1 4 A Maximize
+Mouse 1 6 A Iconify
+
+# デスクトップでマウスをクリックした時の動作
+Mouse 1 R A Nop
+Mouse 2 R A WindowList
+Mouse 3 R A Menu RootMenu Nop
+
+# タイトルバーを右クリックした時の動作
+Mouse 3 T A Menu Window-Ops Nop
+
+# タイトルバーでマウス操作した時の動作
+Mouse 1 T A Func-TitleMouse
+
+# 最小化されたアイコンを左クリックした場合の動作
+Mouse 1 I A Iconify
+
+# 最小化されたアイコンを右クリックした場合の動作
+Mouse 3 I A Menu Window-Ops2 Nop
+
+# ボリュームUP/DOWN/MUTEボタンの動作
+#Key XF86AudioRaiseVolume A A Exec mixer vol.volume=+0.05
+#Key XF86AudioLowerVolume A A Exec mixer vol.volume=-0.05
+#Key XF86AudioMute        A A Exec mixer vol.mute=^
+
+# ALT+F4でアクティブウインドウを閉じる
+key F4 A M Close
+
+# スクリーンショット(PrtSc全画面, ALT+PrtSCウインドウ, CTRL+PrtSCウインドウ内部)
+#Key Print A A Exec scrot -f 'screenshot%Y%m%d%H%M%S.png'
+#Key Print A M Exec scrot -b -u -f 'screenshot%Y%m%d%H%M%S.png'
+#Key Print A C Exec scrot -u -f 'screenshot%Y%m%d%H%M%S.png'
+
+# CTRL+ALT+WIN+Pで電源OFF、CTRL+ALT+WIN+Rで再起動
+#Key P A CM4 Exec sudo shutdown -p now
+#Key R A CM4 Exec sudo shutdown -r now
+
+#----------------------------------------------------------------------
+# 6: ウインドウの装飾
+#----------------------------------------------------------------------
+
+# 一番左側のボタン
+ButtonStyle 1 AllActive    Vector 5 45x45@3 55x45@3 55x55@3 45x55@3 45x45@3
+ButtonStyle 1 AllInActive  Vector 5 45x45@3 55x45@3 55x55@3 45x55@3 45x45@3
+
+# 閉じるボタン
+ButtonStyle 2 AllActive    Vector 5 35x35@3 65x65@3 65x35@4 35x65@3 65x35@3
+ButtonStyle 2 AllInActive  Vector 5 35x35@3 65x65@3 65x35@4 35x65@3 65x35@3
+
+# 最大化ボタン
+ButtonStyle 4 AllActive    Vector 8 30x70@3 30x30@3 70x30@3 70x70@3 30x70@3 50x30@4 50x50@3 70x50@3
+ButtonStyle 4 AllInActive  Vector 8 30x70@3 30x30@3 70x30@3 70x70@3 30x70@3 50x30@4 50x50@3 70x50@3
+
+# 最小化ボタン
+ButtonStyle 6 AllActive    Vector 5 35x60@3 65x60@3 65x50@3 35x50@3 35x60@3
+ButtonStyle 6 AllInActive  Vector 5 35x60@3 65x60@3 65x50@3 35x50@3 35x60@3
+
+#----------------------------------------------------------------------
+# 7: モジュール
+#----------------------------------------------------------------------
+
+# ウインドウシステムの終了
+*QuitVerifyGrabServer
+*QuitVerifyFont         xft:Sans:size=12
+*QuitVerifyButtonFont   xft:Sans:size=12
+*QuitVerifyFore         Black
+*QuitVerifyBack         #cecece
+*QuitVerifyItemFore     Black
+*QuitVerifyItemBack     #cecece
+*QuitVerifyLine         center
+*QuitVerifyText         "ウィンドウシステムを終了しますか?"
+*QuitVerifyLine         center
+*QuitVerifyText         ""
+*QuitVerifyLine         expand
+*QuitVerifyButton       quit " 終了 "
+*QuitVerifyCommand      Quit
+*QuitVerifyButton       quit "取消し"
+*QuitVerifyCommand      Nop
+Style "QuitVerify" NoTitle, NoHandles, BorderWidth 5
+
+# FvwmBottonsの設定
+
+# デスクトップの余白[左右上下]を設定する(FvwmButtonsにあまり被らないように)
+#EwmhBaseStruts 0 0 0 62
+
+#AddToFunc InitFunction    "I" Module FvwmButtons
+#AddToFunc RestartFunction "I" Module FvwmButtons
+
+#Style "FvwmButtons" NoTitle, BorderWidth 0, HandleWidth 0, WindowListSkip, NeverFocus
+
+#*FvwmButtonsBack           #cecece
+#*FvwmButtonsButtonGeometry 64x64+523-0
+#*FvwmButtonsRows           1
+
+#*FvwmButtons(Icon firefox.png, Action (Mouse 1) Exec firefox,
+#             Action (Mouse 4) Nop, Action (Mouse 5) Nop)
+#*FvwmButtons(Icon chrome.png, Action (Mouse 1)  Exec chrome,
+#             Action (Mouse 4) Nop, Action (Mouse 5) Nop)
+#*FvwmButtons(Icon xterm-sol.png, Action (Mouse 1) 'Exec mlterm -geometry 132x24 -title="端末エミュレータ"',
+#             Action (Mouse 4) Nop, Action (Mouse 5) Nop)
+#*FvwmButtons(Swallow "xload" 'Exec xload -update 3 -nolabel -bg \\#cecece', Action(Mouse 1) 'Exec conky',
+#             Action (Mouse 4) Nop, Action (Mouse 5) Nop)
+#*FvwmButtons(Swallow "xbatt" 'Exec xbatt -bg \\#cecece', Padding 6 10,
+#             Action (Mouse 4) Nop, Action (Mouse 5) Nop)
+
+# wineサンプル
+#*FvwmButtons(Icon hidemaru.png, Action (Mouse 1) 'Exec wine $HOME/.wine/drive_c/Program\ Files/Hidemaru/Hidemaru.exe',
+#             Action (Mouse 4) Nop, Action (Mouse 5) Nop)

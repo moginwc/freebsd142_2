@@ -1,0 +1,7 @@
+#!/bin/tcsh
+
+switch ($1)
+    case "C-g":
+        tr '\n' '\0' | xargs -0 tcsh -c 'gimp $*:q &'
+        breaksw
+endsw
