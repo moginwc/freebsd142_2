@@ -113,6 +113,10 @@ cp -r ./.uim.d-mozc/customs/custom-mozc.scm ~/.uim.d/customs/
 mkdir ~/.mozc
 /usr/local/bin/xxd -r -p ./.mozc/config1.bin > ~/.mozc/config1.db
 
+# 実行権を付与する
+chmod +x ~/.config/nsxiv/exec/image-info
+chmod +x ~/.config/nsxiv/exec/key-handler
+
 # 7-3. Windowsやmacとファイル共有したい（smb）
 sudo pkg install -y -q samba419
 sudo service samba_server enable
