@@ -117,7 +117,7 @@ AddToMenu Programs    "プログラム"                      Title
 +                     "パフォーマンスメータ..."         Exec xterm -e top
 +                     ""                                Nop
 #+                     "イメージツール..."               Exec gimp
-#+                     "イメージビューア..."             Exec nsxiv -t -r ~/Pictures
+#+                     "イメージビューア..."             Exec nsxiv -t -r $HOME/Pictures
 +                     "スクリーンショット..."           Exec scrot -s -b $HOME/screenshot%Y%m%d%H%M%S.png
 +                     ""                                Nop
 +                     "付箋..."                         Exec xpad -s
