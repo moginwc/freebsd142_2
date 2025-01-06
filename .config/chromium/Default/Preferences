@@ -1,0 +1,8 @@
+{
+  "download": {
+    "default_directory": "~/Downloads"
+  },
+  "browser": {
+    "check_default_browser": false
+  }
+}
