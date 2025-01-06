@@ -199,6 +199,9 @@ key F4 A M Close
 #Key P A CM4 Exec sudo shutdown -p now
 #Key R A CM4 Exec sudo shutdown -r now
 
+# CTRL+ALT+DELで画面をロックする
+#Key Delete A CM Exec xlock –mode blank –mousemotion –timeout 10
+
 #----------------------------------------------------------------------
 # 6: ウインドウの装飾
 #----------------------------------------------------------------------
