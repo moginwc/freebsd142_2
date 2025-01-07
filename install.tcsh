@@ -56,7 +56,7 @@ mkdir ~/.anthy
 cp -r ./.anthy ~
 
 # アプリのインストール
-sudo pkg install -y -q firefox
+sudo pkg install -y -q firefox-esr
 sudo pkg install -y -q scrot
 sudo pkg install -y -q xlockmore
 sudo pkg install -y -q lupe
