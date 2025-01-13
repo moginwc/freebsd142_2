@@ -108,6 +108,27 @@ if ( $status != 0 ) then
     echo "$addstr" | sudo tee -a /usr/local/etc/sudoers
 endif
 
+# 固定IPv4の設定(コメントアウト)
+set addstr = '#ifconfig_em0="inet 192.168.1.8/24"'
+grep -F -- "$addstr" /etc/rc.conf > /dev/null
+if ( $status != 0 ) then
+    echo "$addstr" | sudo tee -a /etc/rc.conf
+endif
+
+# 固定IPv4のデフォルトゲートウェイの設定(コメントアウト)
+set addstr = '#defaultrouter="192.168.1.1"'
+grep -F -- "$addstr" /etc/rc.conf > /dev/null
+if ( $status != 0 ) then
+    echo "$addstr" | sudo tee -a /etc/rc.conf
+endif
+
+# IPv6の設定(コメントアウト)
+set addstr = '#ifconfig_em0_ipv6="inet6 accept_rtadv"'
+grep -F -- "$addstr" /etc/rc.conf > /dev/null
+if ( $status != 0 ) then
+    echo "$addstr" | sudo tee -a /etc/rc.conf
+endif
+
 # mozc
 cp -r ./.uim.d-mozc/customs/custom-mozc.scm ~/.uim.d/customs/
 mkdir ~/.mozc
