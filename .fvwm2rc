@@ -204,7 +204,7 @@ key F4 A M Close
 #Key Delete A CM Exec xlock –mode blank –mousemotion –timeout 10
 
 # ALT+左クリックでウインドウを移動する(タイトルバーがないウインドウ対策)
-Mouse 1 W M Move
+#Mouse 1 W M Move
 
 #----------------------------------------------------------------------
 # 6: ウインドウの装飾
