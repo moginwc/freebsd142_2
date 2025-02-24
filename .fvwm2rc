@@ -21,40 +21,40 @@ AddToFunc WindowListFunc
 + I Focus
 + I Raise
 
-## ランチャー(firefox) 起動またはフォーカスする
-#DestroyFunc Func-LaunchOrRaise_firefox
-#AddToFunc Func-LaunchOrRaise_firefox
-#+ I Next (firefox) Raise
-#+ I Next (firefox) Focus
-#+ I None (firefox) Exec firefox
-#
-## ランチャー(chrome) 起動またはフォーカスする
-#DestroyFunc Func-LaunchOrRaise_chrome
-#AddToFunc Func-LaunchOrRaise_chrome
-#+ I Next (Chromium-browser) Raise
-#+ I Next (Chromium-browser) Focus
-#+ I None (Chromium-browser) Exec chrome
-#
-## ランチャー(mlterm) 起動またはフォーカスする
-#DestroyFunc Func-LaunchOrRaise_mlterm
-#AddToFunc Func-LaunchOrRaise_mlterm
-#+ I Next (mlterm) Raise
-#+ I Next (mlterm) Focus
-#+ I None (mlterm) Exec mlterm -geometry 132x24 -title="端末エミュレータ"
-#
-## ランチャー(conky) 起動またはフォーカスする
-#DestroyFunc Func-LaunchOrRaise_conky
-#AddToFunc Func-LaunchOrRaise_conky
-#+ I Next (conky) Raise
-#+ I Next (conky) Focus
-#+ I None (conky) Exec conky
-#
-## ランチャー(hidemaru.exe) 起動またはフォーカスする
-#DestroyFunc Func-LaunchOrRaise_hidemaru
-#AddToFunc Func-LaunchOrRaise_hidemaru
-#+ I Next (hidemaru.exe) Raise
-#+ I Next (hidemaru.exe) Focus
-#+ I None (hidemaru.exe) Exec wine $HOME/.wine/drive_c/Program\ Files/Hidemaru/Hidemaru.exe
+# ランチャー(firefox) 起動またはフォーカスする
+DestroyFunc Func-LaunchOrRaise_firefox
+AddToFunc Func-LaunchOrRaise_firefox
++ I Next (firefox) Raise
++ I Next (firefox) Focus
++ I None (firefox) Exec firefox
+
+# ランチャー(chrome) 起動またはフォーカスする
+DestroyFunc Func-LaunchOrRaise_chrome
+AddToFunc Func-LaunchOrRaise_chrome
++ I Next (Chromium-browser) Raise
++ I Next (Chromium-browser) Focus
++ I None (Chromium-browser) Exec chrome
+
+# ランチャー(mlterm) 起動またはフォーカスする
+DestroyFunc Func-LaunchOrRaise_mlterm
+AddToFunc Func-LaunchOrRaise_mlterm
++ I Next (mlterm) Raise
++ I Next (mlterm) Focus
++ I None (mlterm) Exec mlterm -geometry 132x24 -title="端末エミュレータ"
+
+# ランチャー(conky) 起動またはフォーカスする
+DestroyFunc Func-LaunchOrRaise_conky
+AddToFunc Func-LaunchOrRaise_conky
++ I Next (conky) Raise
++ I Next (conky) Focus
++ I None (conky) Exec conky
+
+# ランチャー(hidemaru.exe) 起動またはフォーカスする
+DestroyFunc Func-LaunchOrRaise_hidemaru
+AddToFunc Func-LaunchOrRaise_hidemaru
++ I Next (hidemaru.exe) Raise
++ I Next (hidemaru.exe) Focus
++ I None (hidemaru.exe) Exec wine $HOME/.wine/drive_c/Program\ Files/Hidemaru/Hidemaru.exe
 
 #----------------------------------------------------------------------
 # 2: スタイル
