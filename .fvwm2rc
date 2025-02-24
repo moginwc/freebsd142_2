@@ -155,6 +155,9 @@ AddToMenu Programs    "プログラム"                      Title
 #+                     "イメージツール..."               Exec gimp
 #+                     "写真..."                         Exec nsxiv -t -r $HOME/Pictures
 +                     "スクリーンショット..."           Exec scrot -s -b $HOME/screenshot%Y%m%d%H%M%S.png
+#+                     ""                                Nop
+#+                     "地理情報システム QGIS..."        Exec qgis
+#+                     "3Dモデリング OpenSCAD..."        Exec openscad
 +                     ""                                Nop
 +                     "付箋..."                         Exec xpad -s
 #+                     ""                                Nop
