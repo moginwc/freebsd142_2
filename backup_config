@@ -1,0 +1,17 @@
+# 対象ディレクトリ・ファイル
+home/pcuser
+etc/rc.conf
+etc/ntp.conf
+etc/wall_cmos_clock
+usr/local/etc/X11/xorg.conf.d/vmmouse.conf
+etc/gettytab
+etc/ttys
+etc/motd.template
+etc/motd.template.old
+boot.config
+boot/loader.conf
+etc/wpa_supplicant.conf
+etc/ssh/sshd_config
+usr/local/etc/smb4.conf
+usr/local/lib/firefox/defaults/pref/autoconfig.js
+usr/local/lib/firefox/autoconfig.cfg
