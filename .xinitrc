@@ -16,6 +16,7 @@ uim-toolbar-gtk3 -1-1 &
 xset r rate 250 40
 xset m 5 3
 xkbcomp -I$HOME/.xkb ~/.xkb/keymap/mykbd $DISPLAY
+#xrdb -merge ~/.Xresources
 
 xsetroot -solid \#5b468f
 xclock -update 1 -d -strftime '%Y-%m-%d(%a) %T' -geometry -1+1 -bg \#f8f8f7 &
