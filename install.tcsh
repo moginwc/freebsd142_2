@@ -148,6 +148,9 @@ cp ./.gtkrc-2.0 ~
 # Xresouces
 cp ./.Xresources ~
 
+# sylpheed-2.0
+cp -r ./.sylpheed-2.0 ~
+
 # 7-3. Windowsやmacとファイル共有したい（smb）
 sudo pkg install -y -q samba419
 sudo service samba_server enable
