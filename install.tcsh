@@ -32,7 +32,7 @@ sudo pkg install -y -q ImageMagick7
 magick ~/icons/programs.xpm -trim +repage -scale 200% ~/icons/programs.png
 magick ~/icons/xterm-sol.xpm ~/icons/xterm-sol.png
 sudo pkg install -y -q fvwm3
-sudo pkg install -y -q ja-font-ipa
+sudo pkg install -y -q ja-font-ipa noto-sans-jp
 
 # ウィンドウシステムの初期設定
 cp ./.xinitrc ~
@@ -62,7 +62,7 @@ sudo pkg install -y -q xlockmore
 sudo pkg install -y -q lupe
 sudo pkg install -y -q xpad3
 
-# xpadの初期設定
+# xpadの初期設定、他config設定
 cp -r ./.config ~
 
 # パッケージのアップデート
@@ -137,6 +137,16 @@ mkdir ~/.mozc
 # 実行権を付与する
 chmod +x ~/.config/nsxiv/exec/image-info
 chmod +x ~/.config/nsxiv/exec/key-handler
+
+# rsyncバックアップ対象・除外設定ファイルのコピー
+cp ./.backup_config ~
+cp ./.backup_exclude_config ~
+
+# gtkrc-2.0
+cp ./.gtkrc-2.0 ~
+
+# Xresouces
+cp ./.Xresources ~
 
 # 7-3. Windowsやmacとファイル共有したい（smb）
 sudo pkg install -y -q samba419
