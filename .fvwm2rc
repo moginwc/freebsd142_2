@@ -241,7 +241,7 @@ key F4 A M Close
 #Key R A CM4 Exec sudo shutdown -r now
 
 # CTRL+ALT+DELで画面をロックする
-#Key Delete A CM Exec xlock –mode blank –mousemotion –timeout 10
+#Key Delete A CM Exec xlock -mode blank -mousemotion -timeout 10
 
 # ALT+左クリックでウインドウを移動する(タイトルバーがないウインドウ対策)
 #Mouse 1 W M Move
