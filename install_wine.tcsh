@@ -27,7 +27,7 @@ cp hidemaru-2.png ~/icons/hidemaru.png
 curl -L -O https://github.com/WinMerge/winmerge/releases/download/v2.16.42.1/WinMerge-2.16.42.1-x64-Setup.exe
 wine ./WinMerge-2.16.42.1-x64-Setup.exe /VERYSILENT # サイレントインストールオプション
 
-# Bzのインストール
+# BzEditor（ポータブルzip版）のインストール
 curl -O https://gitlab.com/-/project/12653927/uploads/da22779e33bcec39cbe8b6bddfacef4f/Bz1987Portable.zip
 unzip Bz1987Portable.zip
 mkdir ~/wine_bin
@@ -38,5 +38,5 @@ mv ~/wine_bin/Bz1987Portable ~/wine_bin/Bz
 pkg install -y ja-nkf
 nkf -W8 -w16L -Lw ./wine-japanese.txt > ./wine-japanese.reg
 regedit ./wine-japanese.reg
-#nkf -W8 -w16L -Lw ./private/font.txt > ./private/font.reg
-#regedit ./private/font.reg
+##nkf -W8 -w16L -Lw ./private/font.txt > ./private/font.reg
+##regedit ./private/font.reg
