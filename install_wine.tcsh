@@ -3,6 +3,7 @@
 # wineのインストール
 sudo pkg install -y wine wine-gecko wine-mono winetricks
 yes | /usr/local/share/wine/pkg32.sh install wine mesa-dri
+
 winetricks cjkfonts corefonts
 winecfg # 表示されたら、OKを押してください
 
@@ -35,7 +36,7 @@ cp -r Bz1987Portable ~/wine_bin
 mv ~/wine_bin/Bz1987Portable ~/wine_bin/Bz
 
 # 代替フォントの設定
-pkg install -y ja-nkf
+sudo pkg install -y ja-nkf
 nkf -W8 -w16L -Lw ./wine-japanese.txt > ./wine-japanese.reg
 regedit ./wine-japanese.reg
 ##nkf -W8 -w16L -Lw ./private/font.txt > ./private/font.reg
