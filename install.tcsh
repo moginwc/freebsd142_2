@@ -38,6 +38,11 @@ sudo pkg install -y -q ja-font-ipa noto-sans-jp
 cp ./.xinitrc ~
 cp ./.fvwm2rc ~
 
+# 初期設定ファイルのコメント外し
+sed -i '' '1s/^##//g' ~/.fvwm2rc
+sed -i '' '1s/^##//g' ~/.xinitrc
+sed -i '' '1s/^##//g' ~/.login
+
 # 端末エミュレータのインストールと設定
 sudo pkg install -y -q mlterm
 cp -r ./.mlterm ~
@@ -154,6 +159,14 @@ cp -r ./.sylpheed-2.0 ~
 
 # bin
 cp -r ./bin ~
+
+# インストール
+pkg install -y gimp
+pkg install -y nsxiv
+pkg install -y qgis
+pkg install -y openscad
+pkg install -y freerdp
+pkg install -y tigervnc-viewer
 
 # サンプルファイル
 cp line.csv point.csv ant_tower.scad ~
