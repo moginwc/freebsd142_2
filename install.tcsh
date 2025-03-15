@@ -39,9 +39,9 @@ cp ./.xinitrc ~
 cp ./.fvwm2rc ~
 
 # 初期設定ファイルのコメント外し
-sed -i '' '1s/^##//g' ~/.fvwm2rc
-sed -i '' '1s/^##//g' ~/.xinitrc
-sed -i '' '1s/^##//g' ~/.login
+sed -i '' 's/^##//g' ~/.fvwm2rc
+sed -i '' 's/^##//g' ~/.xinitrc
+sed -i '' 's/^##//g' ~/.login
 
 # 端末エミュレータのインストールと設定
 sudo pkg install -y -q mlterm
