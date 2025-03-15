@@ -160,7 +160,7 @@ cp -r ./.sylpheed-2.0 ~
 # bin
 cp -r ./bin ~
 
-# インストール
+# 各アプリインストール
 sudo pkg install -y gimp
 sudo pkg install -y nsxiv
 sudo pkg install -y qgis
@@ -170,6 +170,9 @@ sudo pkg install -y tigervnc-viewer
 
 # サンプルファイル
 cp line.csv point.csv ant_tower.scad ~
+
+# 再起動時に/tmpフォルダーをクリアーする
+sudo service clear_tmp enable
 
 # 7-3. Windowsやmacとファイル共有したい（smb）
 sudo pkg install -y -q samba419
