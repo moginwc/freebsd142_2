@@ -11,6 +11,6 @@ if ( -x /usr/bin/resizewin ) /usr/bin/resizewin -z
 # Display a random cookie on each login.
 #if ( -x /usr/bin/fortune ) /usr/bin/fortune freebsd-tips
 
-#if ( $?SSH_CLIENT == 0 && $?SSH_TTY == 0 && $?DISPLAY == 0 ) then
-#	startx
-#endif
+##if ( $?SSH_CLIENT == 0 && $?SSH_TTY == 0 && $?DISPLAY == 0 ) then
+##	startx
+##endif
