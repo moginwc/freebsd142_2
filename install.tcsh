@@ -149,6 +149,7 @@ cp ./.gtkrc-2.0 ~
 cp ./.Xresources ~
 
 # sylpheed-2.0
+pkg install -y sylpheed
 cp -r ./.sylpheed-2.0 ~
 
 # bin
