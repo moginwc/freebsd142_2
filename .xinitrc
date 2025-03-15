@@ -16,14 +16,14 @@ uim-toolbar-gtk3 -1-1 &
 xset r rate 250 40
 xset m 5 3
 xkbcomp -I$HOME/.xkb ~/.xkb/keymap/mykbd $DISPLAY
-#xrdb -merge ~/.Xresources
+##xrdb -merge ~/.Xresources
 
 xsetroot -solid \#5b468f
 xclock -update 1 -d -strftime '%Y-%m-%d(%a) %T' -geometry -1+1 -bg \#f8f8f7 &
 mlterm -geometry 80x24+1+1 -title="端末エミュレータ" &
-#xpad -s
+##xpad -s
 
-#autocutsel -selection PRIMARY &
-#autocutsel -selection CLIPBOARD &
+##autocutsel -selection PRIMARY &
+##autocutsel -selection CLIPBOARD &
 
 exec fvwm3
