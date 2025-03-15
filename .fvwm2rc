@@ -100,7 +100,7 @@ Style * ResizeOpaque
 Style * MaxWindowSize 100 100
 
 # wineにおいて、ダイアログボックス表示後に元の画面にフォーカスが戻らないのを防止する
-#Style * Lenience
+##Style * Lenience
 
 #----------------------------------------------------------------------
 # 3: カラーセット
@@ -148,28 +148,28 @@ AddToMenu Programs    "プログラム"                      Title
 +                     "端末エミュレータ 132x24..."      Exec mlterm -geometry 132x24 -title=端末エミュレータ
 +                     ""                                Nop
 +                     "カレンダ..."                     Exec xterm -geometry 70x38 -T カレンダ -e tcsh -c "cal -y; stty -icanon; dd bs=1 count=1"
-#+                     "メールツール..."                 Exec sylpheed
+##+                     "メールツール..."                 Exec sylpheed
 +                     ""                                Nop
 +                     "時計..."                         Exec xclock
 +                     "電卓..."                         Exec xcalc
 +                     "パフォーマンスメータ..."         Exec xterm -e top
 +                     ""                                Nop
-#+                     "イメージツール..."               Exec gimp
-#+                     "写真..."                         Exec nsxiv -t -r $HOME/Pictures
+##+                     "イメージツール..."               Exec gimp
+##+                     "写真..."                         Exec nsxiv -t -r $HOME/Pictures
 +                     "スクリーンショット..."           Exec scrot -s -b $HOME/screenshot%Y%m%d%H%M%S.png
-#+                     ""                                Nop
-#+                     "地理情報システム QGIS..."        Exec qgis
-#+                     "3Dモデリング OpenSCAD..."        Exec openscad
+##+                     ""                                Nop
+##+                     "地理情報システム QGIS..."        Exec qgis
+##+                     "3Dモデリング OpenSCAD..."        Exec openscad
 +                     ""                                Nop
 +                     "付箋..."                         Exec xpad -s
-#+                     ""                                Nop
-#+                     "リモートデスクトップ接続..."     Exec xfreerdp /u:username /p:password /size:800x600 /sound /clipboard /cert-ignore /v:192.168.1.16
-#+                     "VNCビューア..."                  Exec vncviewer
-#+                     "Telnet (シフトJIS接続)..."       Exec mlterm --km=Shift_JIS -title=Telnet\ \(シフトJIS接続\) -e telnet -8
+##+                     ""                                Nop
+##+                     "リモートデスクトップ接続..."     Exec xfreerdp /u:username /p:password /size:800x600 /sound /clipboard /cert-ignore /v:192.168.1.16
+##+                     "VNCビューア..."                  Exec vncviewer
+##+                     "Telnet (シフトJIS接続)..."       Exec mlterm --km=Shift_JIS -title=Telnet\ \(シフトJIS接続\) -e telnet -8
 +                     ""                                Nop
 +                     "ウェブブラウザ..."               Exec firefox
-#+                     "ウェブブラウザ Firefox..."       Exec firefox
-#+                     "ウェブブラウザ Chromium..."      Exec chrome
+##+                     "ウェブブラウザ Firefox..."       Exec firefox
+##+                     "ウェブブラウザ Chromium..."      Exec chrome
 
 AddToMenu Utilities   "ユーティリティ"                  Title
 +                     "再表示"                          Refresh
@@ -224,27 +224,27 @@ Mouse 1 I A Iconify
 Mouse 3 I A Menu Window-Ops2 Nop
 
 # ボリュームUP/DOWN/MUTEボタンの動作
-#Key XF86AudioRaiseVolume A A Exec mixer vol.volume=+0.05
-#Key XF86AudioLowerVolume A A Exec mixer vol.volume=-0.05
-#Key XF86AudioMute        A A Exec mixer vol.mute=^
+##Key XF86AudioRaiseVolume A A Exec mixer vol.volume=+0.05
+##Key XF86AudioLowerVolume A A Exec mixer vol.volume=-0.05
+##Key XF86AudioMute        A A Exec mixer vol.mute=^
 
 # ALT+F4でアクティブウインドウを閉じる
 key F4 A M Close
 
 # スクリーンショット(PrtSc全画面, ALT+PrtSCウインドウ, CTRL+PrtSCウインドウ内部)
-#Key Print A A Exec scrot -f 'screenshot%Y%m%d%H%M%S.png'
-#Key Print A M Exec scrot -b -u -f 'screenshot%Y%m%d%H%M%S.png'
-#Key Print A C Exec scrot -u -f 'screenshot%Y%m%d%H%M%S.png'
+##Key Print A A Exec scrot -f 'screenshot%Y%m%d%H%M%S.png'
+##Key Print A M Exec scrot -b -u -f 'screenshot%Y%m%d%H%M%S.png'
+##Key Print A C Exec scrot -u -f 'screenshot%Y%m%d%H%M%S.png'
 
 # CTRL+ALT+WIN+Pで電源OFF、CTRL+ALT+WIN+Rで再起動
-#Key P A CM4 Exec sudo shutdown -p now
-#Key R A CM4 Exec sudo shutdown -r now
+##Key P A CM4 Exec sudo shutdown -p now
+##Key R A CM4 Exec sudo shutdown -r now
 
 # CTRL+ALT+DELで画面をロックする
-#Key Delete A CM Exec xlock -mode blank -mousemotion -timeout 10
+##Key Delete A CM Exec xlock -mode blank -mousemotion -timeout 10
 
 # ALT+左クリックでウインドウを移動する(タイトルバーがないウインドウ対策)
-#Mouse 1 W M Move
+##Mouse 1 W M Move
 
 #----------------------------------------------------------------------
 # 6: ウインドウの装飾
@@ -293,22 +293,22 @@ Style "QuitVerify" NoTitle, NoHandles, BorderWidth 5
 
 # デスクトップの余白[左右上下]を設定する(FvwmButtonsにあまり重ならないように)
 #EwmhBaseStruts 0 0 0 62 # 重ならない
-#EwmhBaseStruts 0 0 0 37 # 少し重なる
+##EwmhBaseStruts 0 0 0 37 # 少し重なる
 
-#AddToFunc InitFunction    "I" Module FvwmButtons
-#AddToFunc RestartFunction "I" Module FvwmButtons
+##AddToFunc InitFunction    "I" Module FvwmButtons
+##AddToFunc RestartFunction "I" Module FvwmButtons
 
-#Style "FvwmButtons" NoTitle, BorderWidth 0, HandleWidth 0, WindowListSkip, NeverFocus, FixedPosition
+##Style "FvwmButtons" NoTitle, BorderWidth 0, HandleWidth 0, WindowListSkip, NeverFocus, FixedPosition
 
-#*FvwmButtons: Back           #cecece
-#*FvwmButtons: ButtonGeometry 64x64+587-0
-#*FvwmButtons: Rows           1
+##*FvwmButtons: Back           #cecece
+##*FvwmButtons: ButtonGeometry 64x64+523-0
+##*FvwmButtons: Rows           1
 
-#*FvwmButtons: (Icon "firefox.png",   Action (Mouse 1) Func-LaunchOrRaise_firefox)
-#*FvwmButtons: (Icon "chrome.png",    Action (Mouse 1) Func-LaunchOrRaise_chrome)
-#*FvwmButtons: (Icon "xterm-sol.png", Action (Mouse 1) Func-LaunchOrRaise_mlterm, Action (Mouse 3) 'Exec mlterm -geometry 132x24 -title="端末エミュレータ"')
-#*FvwmButtons: (Swallow "xload" 'Exec xload -update 3 -nolabel -bg \\#cecece', Action(Mouse 1) Func-LaunchOrRaise_conky)
-#*FvwmButtons: (Swallow "xbatt" 'Exec xbatt -bg \\#cecece', Padding 6 10)
+##*FvwmButtons: (Icon "firefox.png",   Action (Mouse 1) Func-LaunchOrRaise_firefox)
+##*FvwmButtons: (Icon "chrome.png",    Action (Mouse 1) Func-LaunchOrRaise_chrome)
+##*FvwmButtons: (Icon "xterm-sol.png", Action (Mouse 1) Func-LaunchOrRaise_mlterm, Action (Mouse 3) 'Exec mlterm -geometry 132x24 -title="端末エミュレータ"')
+##*FvwmButtons: (Swallow "xload" 'Exec xload -update 3 -nolabel -bg \\#cecece', Action(Mouse 1) Func-LaunchOrRaise_conky)
+##*FvwmButtons: (Swallow "xbatt" 'Exec xbatt -bg \\#cecece', Padding 6 10)
 
 # wineサンプル
 #*FvwmButtons: (Icon "hidemaru.png",  Action (Mouse 1) Func-LaunchOrRaise_hidemaru)
