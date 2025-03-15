@@ -17,9 +17,9 @@ alias vi	vim
 alias rm	'rm -i'
 
 # wineサンプル
-#alias bz       'wine ~/wine_bin/Bz/Bz64.exe'
-#alias hidemaru 'wine ~/.wine/drive_c/Program\ Files/Hidemaru/Hidemaru.exe'
-#alias winmerge 'wine ~/.wine/drive_c/Program\ Files/WinMerge/WinMergeU.exe'
+##alias bz       'wine ~/wine_bin/Bz/Bz64.exe'
+##alias hidemaru 'wine ~/.wine/drive_c/Program\ Files/Hidemaru/Hidemaru.exe'
+##alias winmerge 'wine ~/.wine/drive_c/Program\ Files/WinMerge/WinMergeU.exe'
 #alias cd32     'cd ~/.wine/drive_c/Program\ Files\ \(x86\)'
 #alias cd64     'cd ~/.wine/drive_c/Program\ Files'
 
