@@ -21,7 +21,7 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/mykbd $DISPLAY
 xsetroot -solid \#5b468f
 xclock -update 1 -d -strftime '%Y-%m-%d(%a) %T' -geometry -1+1 -bg \#f8f8f7 &
 mlterm -geometry 80x24+1+1 -title="端末エミュレータ" &
-##xpad -s
+#xpad -s &
 
 ##autocutsel -selection PRIMARY &
 ##autocutsel -selection CLIPBOARD &
