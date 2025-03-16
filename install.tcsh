@@ -163,7 +163,7 @@ cp -r ./bin ~
 # 各アプリインストール
 sudo pkg install -y -q gimp
 sudo pkg install -y -q nsxiv
-sudo pkg install -y -q qgis
+sudo pkg install -y -q qgis open-sans
 sudo pkg install -y -q openscad
 sudo pkg install -y -q freerdp
 sudo pkg install -y -q tigervnc-viewer
