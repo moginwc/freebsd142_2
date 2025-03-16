@@ -154,19 +154,19 @@ cp ./.gtkrc-2.0 ~
 cp ./.Xresources ~
 
 # sylpheed-2.0
-sudo pkg install -y sylpheed
+sudo pkg install -y -q sylpheed
 cp -r ./.sylpheed-2.0 ~
 
 # bin
 cp -r ./bin ~
 
 # 各アプリインストール
-sudo pkg install -y gimp
-sudo pkg install -y nsxiv
-sudo pkg install -y qgis
-sudo pkg install -y openscad
-sudo pkg install -y freerdp
-sudo pkg install -y tigervnc-viewer
+sudo pkg install -y -q gimp
+sudo pkg install -y -q nsxiv
+sudo pkg install -y -q qgis
+sudo pkg install -y -q openscad
+sudo pkg install -y -q freerdp
+sudo pkg install -y -q tigervnc-viewer
 
 # サンプルファイル
 cp line.csv point.csv ant_tower.scad ~
