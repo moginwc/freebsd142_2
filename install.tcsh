@@ -172,7 +172,7 @@ sudo pkg install -y -q tigervnc-viewer
 cp line.csv point.csv ant_tower.scad ~
 
 # 再起動時に/tmpフォルダーをクリアーする
-sudo service clear_tmp enable
+sudo sysrc clear_tmp_enable="YES"
 
 # 7-3. Windowsやmacとファイル共有したい（smb）
 sudo pkg install -y -q samba419
