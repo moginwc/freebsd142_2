@@ -35,6 +35,10 @@ mkdir ~/wine_bin
 cp -r Bz1987Portable ~/wine_bin
 mv ~/wine_bin/Bz1987Portable ~/wine_bin/Bz
 
+# 設定ファイルのコメント外し
+sed -i '' 's/^#wine#//g' ~/.fvwm2rc
+sed -i '' 's/^#wine#//g' ~/.cshrc
+
 # 代替フォントの設定
 sudo pkg install -y ja-nkf
 nkf -W8 -w16L -Lw ./wine-japanese.txt > ./wine-japanese.reg
