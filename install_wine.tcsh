@@ -3,7 +3,6 @@
 # wineのインストール
 sudo pkg install -y wine wine-gecko wine-mono winetricks
 yes | /usr/local/share/wine/pkg32.sh install wine mesa-dri
-
 winetricks cjkfonts corefonts
 winecfg # 表示されたら、OKを押してください
 
