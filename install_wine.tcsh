@@ -23,6 +23,15 @@ wrestool -x --output=./hidemaru_icon -t14 ~/.wine/drive_c/Program\ Files/Hidemar
 convert ./hidemaru_icon/Hidemaru.exe_14_102_1041.ico hidemaru.png
 cp hidemaru-2.png ~/icons/hidemaru.png
 
+# 秀丸の読み書き設定
+set addstr = '[Software\\Wine\\AppDefaults\\Hidemaru.exe]'
+grep -F -- "$addstr" ~/.wine/user.reg > /dev/null
+if ( $status != 0 ) then
+    echo "$addstr" | tee -a ~/.wine/user.reg
+    set addstr = '"Version"="winxp"'
+    echo "$addstr" | tee -a ~/.wine/user.reg
+endif
+
 # WinMergeのサイレントインストール
 curl -L -O https://github.com/WinMerge/winmerge/releases/download/v2.16.42.1/WinMerge-2.16.42.1-x64-Setup.exe
 wine ./WinMerge-2.16.42.1-x64-Setup.exe /VERYSILENT # サイレントインストールオプション
