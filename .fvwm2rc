@@ -311,4 +311,4 @@ Style "QuitVerify" NoTitle, NoHandles, BorderWidth 5
 ##*FvwmButtons: (Swallow "xbatt" 'Exec xbatt -bg \\#cecece', Padding 6 10)
 
 # wineサンプル
-#*FvwmButtons: (Icon "hidemaru.png",  Action (Mouse 1) Func-LaunchOrRaise_hidemaru)
+#wine#*FvwmButtons: (Icon "hidemaru.png",  Action (Mouse 1) Func-LaunchOrRaise_hidemaru)
