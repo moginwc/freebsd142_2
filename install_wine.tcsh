@@ -3,7 +3,7 @@
 # wineのインストール
 sudo pkg install -y wine wine-gecko wine-mono winetricks
 yes | /usr/local/share/wine/pkg32.sh install wine mesa-dri
-rehash
+rehash # winetricksがインストールされたことを認識させる
 winetricks cjkfonts corefonts
 winecfg # 表示されたら、OKを押してください
 
@@ -25,6 +25,7 @@ convert ./hidemaru_icon/Hidemaru.exe_14_102_1041.ico hidemaru.png
 cp hidemaru-2.png ~/icons/hidemaru.png
 
 # 秀丸の読み書き設定
+wineserver -k # wine関係のサーバープロセスを終了する
 set addstr = '[Software\\Wine\\AppDefaults\\Hidemaru.exe]'
 grep -F -- "$addstr" ~/.wine/user.reg > /dev/null
 if ( $status != 0 ) then
