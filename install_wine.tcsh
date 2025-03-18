@@ -12,7 +12,7 @@ sudo pkg install -y ja-font-ume
 
 # 秀丸のサイレントインストール
 sudo pkg install -y cabextract # 秀丸のインストーラーの実態は.cabファイル
-curl -O https://hide.maruo.co.jp/software/bin/hm944_x64_signed.exe
+fetch https://hide.maruo.co.jp/software/bin/hm944_x64_signed.exe
 mkdir hidemaru
 cabextract -d ./hidemaru hm944_x64_signed.exe
 wine ./hidemaru/hmsetup.exe /h # /hがサイレントインストールオプション
@@ -35,11 +35,11 @@ if ( $status != 0 ) then
 endif
 
 # WinMergeのサイレントインストール
-curl -L -O https://github.com/WinMerge/winmerge/releases/download/v2.16.42.1/WinMerge-2.16.42.1-x64-Setup.exe
+fetch https://github.com/WinMerge/winmerge/releases/download/v2.16.42.1/WinMerge-2.16.42.1-x64-Setup.exe
 wine ./WinMerge-2.16.42.1-x64-Setup.exe /VERYSILENT # サイレントインストールオプション
 
 # BzEditor（ポータブルzip版）のインストール
-curl -O https://gitlab.com/-/project/12653927/uploads/da22779e33bcec39cbe8b6bddfacef4f/Bz1987Portable.zip
+fetch https://gitlab.com/-/project/12653927/uploads/da22779e33bcec39cbe8b6bddfacef4f/Bz1987Portable.zip
 unzip Bz1987Portable.zip
 mkdir ~/wine_bin
 cp -r Bz1987Portable ~/wine_bin
