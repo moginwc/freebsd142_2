@@ -25,7 +25,7 @@ convert ./hidemaru_icon/Hidemaru.exe_14_102_1041.ico hidemaru.png
 cp hidemaru-2.png ~/icons/hidemaru.png
 
 # 秀丸の読み書き設定
-wineserver -k # wine関係のサーバープロセスを終了する
+wineserver -k # wine関係のサーバープロセスをいったん終了する(下記./wine/user.regファイルに追記をしたいため)
 set addstr = '[Software\\Wine\\AppDefaults\\Hidemaru.exe]'
 grep -F -- "$addstr" ~/.wine/user.reg > /dev/null
 if ( $status != 0 ) then
@@ -37,6 +37,7 @@ endif
 # WinMergeのサイレントインストール
 fetch https://github.com/WinMerge/winmerge/releases/download/v2.16.42.1/WinMerge-2.16.42.1-x64-Setup.exe
 wine ./WinMerge-2.16.42.1-x64-Setup.exe /VERYSILENT # サイレントインストールオプション
+# この後に何かフォルダーのようなものが表示されますが、閉じてください
 
 # BzEditor（ポータブルzip版）のインストール
 fetch https://gitlab.com/-/project/12653927/uploads/da22779e33bcec39cbe8b6bddfacef4f/Bz1987Portable.zip
@@ -45,13 +46,11 @@ mkdir ~/wine_bin
 cp -r Bz1987Portable ~/wine_bin
 mv ~/wine_bin/Bz1987Portable ~/wine_bin/Bz
 
-# 設定ファイルのコメント外し
+# wine設定ファイルのコメント外し
 sed -i '' 's/^#wine#//g' ~/.fvwm2rc
 sed -i '' 's/^#wine#//g' ~/.cshrc
 
 # 代替フォントの設定
 sudo pkg install -y ja-nkf
-nkf -W8 -w16L -Lw ./wine-japanese.txt > ./wine-japanese.reg
+nkf -W8 -w16L -Lw ./wine-japanese.reg..txt > ./wine-japanese.reg
 regedit ./wine-japanese.reg
-##nkf -W8 -w16L -Lw ./private/font.txt > ./private/font.reg
-##regedit ./private/font.reg
