@@ -153,24 +153,33 @@ cp ./.gtkrc-2.0 ~
 # 9-14.フォントのアンチエイリアスをグレースケール方式にしたい(GTK2系)
 cp ./.Xresources ~
 
-# 8-18.閲覧専用でメーラーを使いたい
+# 8-18.閲覧専用でメーラーを使いたい、メッセージ本文以外のフォントを変更したい
 sudo pkg install -y -q sylpheed
-
-# メッセージ本文以外のフォントを変更したい
 cp -r ./.sylpheed-2.0 ~
 
-# bin
+# 8-7.Macのユーザー辞書をインポートしたい
+# 11-2.Macのユーザー辞書をMozcへインポートしたい
+# 8-17.QGIS(地理空間情報の閲覧、編集、分析)を使いたい→GPSロガーのデータ(NMEA0183形式)を読み込みたい
+# 8-5.Firefoxを起動し、radikoでラジオNIKKEI第1を自動的に再生したい→NHKラジオ第一放送（首都圏）に切り替えたい
+# 13-5.デジカメなどの画像データを、撮影日(年/月/日)別に整理したい
 cp -r ./bin ~
 
-# 各アプリインストール
+# 8-11.GIMPを使いたい
 sudo pkg install -y -q gimp
-sudo pkg install -y -q qgis open-sans
-sudo pkg install -y -q openscad
-sudo pkg install -y -q freerdp
-sudo pkg install -y -q tigervnc-viewer
 
-# サンプルファイル
-cp line.csv point.csv ant_tower.scad ~
+# 8-17.QGIS(地理空間情報の閲覧、編集、分析)を使いたい
+sudo pkg install -y -q qgis open-sans
+cp line.csv point.csv ~
+
+# 8-13.OpenSCADで通信鉄塔をモデリングしたい
+sudo pkg install -y -q openscad
+cp ant_tower.scad ~
+
+# 7-5.FreeBSDから、Windowsにリモートデスクトップ経由で接続したい
+sudo pkg install -y -q freerdp
+
+# 7-7.FreeBSDから、MacにVNC接続したい
+sudo pkg install -y -q tigervnc-viewer
 
 # 5-8.再起動時に/tmpフォルダーをクリアーしたい
 sudo sysrc clear_tmp_enable="YES"
