@@ -142,6 +142,7 @@ mkdir ~/.mozc
 pkg install -y -q xsxiv
 chmod +x ~/.config/nsxiv/exec/image-info
 chmod +x ~/.config/nsxiv/exec/key-handler
+pkg install -y -q p5-Image-ExifTool
 
 # 12-6.外付けHDDに、ファイル・ディレクトリを指定してバックアップを取りたい
 cp ./.backup_config ~
@@ -178,11 +179,11 @@ cp ant_tower.scad ~
 # 7-5.FreeBSDから、Windowsにリモートデスクトップ経由で接続したい
 sudo pkg install -y -q freerdp
 
-# 7-7.FreeBSDから、MacにVNC接続したい
-sudo pkg install -y -q tigervnc-viewer
-
 # 5-8.再起動時に/tmpフォルダーをクリアーしたい
 sudo sysrc clear_tmp_enable="YES"
+
+# 8-9.画面スライドショーしたい
+sudo pkg install -y -q feh
 
 # 7-3.Windowsやmacとファイル共有したい(SMB)
 sudo pkg install -y -q samba419
