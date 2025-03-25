@@ -52,5 +52,5 @@ sed -i '' 's/^#wine#//g' ~/.cshrc
 
 # 代替フォントの設定
 sudo pkg install -y ja-nkf
-nkf -W8 -w16L -Lw ./wine-japanese.reg..txt > ./wine-japanese.reg
+nkf -W8 -w16L -Lw ./wine-japanese.reg.txt > ./wine-japanese.reg
 regedit ./wine-japanese.reg
