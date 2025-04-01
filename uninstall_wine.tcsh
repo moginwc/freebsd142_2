@@ -10,4 +10,5 @@ sudo pkg autoremove
 \rm     ~/.local/share/applications/wine-*
 \rm     ~/.local/share/desktop-directories/wine-*
 \rm -rf ~/.cache/winetricks
+\rm -rf ~/.cache/wine
 \rm -rf ~/.wine
