@@ -22,6 +22,9 @@ sed -i '' 's/^"TitleText"=.*/"TitleText"="255 255 255"/'                    ~/.w
 sed -i '' 's/^"CaptionHeight"=.*/"CaptionHeight"="-270"/'                   ~/.wine/user.reg
 sed -i '' 's/^"CaptionWidth"=.*/"CaptionWidth"="-270"/'                     ~/.wine/user.reg
 
+# 共通の設定を行う - ウィンドウマネージャがウィンドウを装飾するのを許可するのチェックを外す
+sed -i '' 's/^"Decorated"=.*/"Decorated"="N"/'                              ~/.wine/user.reg
+
 # 秀丸のサイレントインストール
 sudo pkg install -y cabextract # 秀丸のインストーラーの実態は.cabファイル
 fetch https://hide.maruo.co.jp/software/bin/hm944_x64_signed.exe
