@@ -80,6 +80,7 @@ sudo touch /etc/motd.template
 
 # 8-6.chromium（ウェブブラウザ）を使用したい
 sudo pkg install -y -q chromium webfonts
+mkdir ~/Downloads
 
 # 9-1. 9-2.
 cp /usr/local/lib/firefox/browser/chrome/icons/default/default48.png ~/icons/firefox.png
