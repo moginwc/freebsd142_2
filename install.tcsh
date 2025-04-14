@@ -134,7 +134,7 @@ if ( $status != 0 ) then
     echo "$addstr" | sudo tee -a /etc/rc.conf
 endif
 
-# 11-1.mozcのインストールと初期設定 *初期設定のみ
+# 11-1.mozcのインストールと初期設定 (*ここでは初期設定のみ)
 cp -r ./.uim.d-mozc/customs/custom-mozc.scm ~/.uim.d/customs/
 mkdir ~/.mozc
 /usr/local/bin/xxd -r -p ./.mozc/config1.bin > ~/.mozc/config1.db
@@ -144,6 +144,11 @@ pkg install -y -q xsxiv
 chmod +x ~/.config/nsxiv/exec/image-info
 chmod +x ~/.config/nsxiv/exec/key-handler
 pkg install -y -q p5-Image-ExifTool
+
+# サンプル画像のコピー
+mkdir ~/Pictures
+convert ./colorbar1.svg ~/Pictures/colorbar1.png
+convert ./colorbar2.svg ~/Pictures/colorbar2.png
 
 # 12-6.外付けHDDに、ファイル・ディレクトリを指定してバックアップを取りたい
 cp ./.backup_config ~
