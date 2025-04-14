@@ -4,7 +4,7 @@
 sudo pkg install -y wine wine-gecko wine-mono winetricks
 yes | /usr/local/share/wine/pkg32.sh install wine mesa-dri
 rehash # winetricksがインストールされたことを認識させる
-winetricks cjkfonts corefonts
+winetricks corefonts
 wineboot # 初回起動でWineシステムを初期化する
 
 # 梅ゴシックのインストール
@@ -23,7 +23,9 @@ sed -i '' 's/^"CaptionHeight"=.*/"CaptionHeight"="-270"/'                   ~/.w
 sed -i '' 's/^"CaptionWidth"=.*/"CaptionWidth"="-270"/'                     ~/.wine/user.reg
 
 # 共通の設定を行う - ウィンドウマネージャがウィンドウを装飾するのを許可するのチェックを外す
-sed -i '' 's/^"Decorated"=.*/"Decorated"="N"/'                              ~/.wine/user.reg
+sudo pkg install -y ja-nkf
+nkf -W8 -w16L -Lw ./wine-common_settings.reg.txt > ./wine-common_settings.reg
+regedit /s ./wine-common_settings.reg
 
 # 秀丸のサイレントインストール
 sudo pkg install -y cabextract # 秀丸のインストーラーの実態は.cabファイル
@@ -65,6 +67,5 @@ sed -i '' 's/^#wine#//g' ~/.fvwm2rc
 sed -i '' 's/^#wine#//g' ~/.cshrc
 
 # 代替フォントの設定
-sudo pkg install -y ja-nkf
 nkf -W8 -w16L -Lw ./wine-japanese.reg.txt > ./wine-japanese.reg
 regedit /s ./wine-japanese.reg
