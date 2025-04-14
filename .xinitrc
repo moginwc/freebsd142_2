@@ -11,6 +11,8 @@ export XIM=uim
 uim-xim &
 uim-toolbar-gtk3 -1-1 &
 
+#export WINEDEBUG=-all
+
 #setxkbmap jp
 
 xset r rate 250 40
