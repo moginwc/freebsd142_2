@@ -23,9 +23,9 @@
             "url": "https://chatgpt.com"
          }, {
             "id": "9",
-            "name": "DeepL翻訳",
+            "name": "Google翻訳",
             "type": "url",
-            "url": "https://www.deepl.com/ja/translator/"
+            "url": "https://translate.google.com/"
          }, {
             "id": "10",
             "name": "NHKニュース",
