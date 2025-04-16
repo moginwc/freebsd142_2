@@ -1,0 +1,12 @@
+{
+  "policies": {
+    "DownloadDirectory": "~/Downloads",
+    "DontCheckDefaultBrowser": true,
+    "Homepage": {
+      "URL": "https://www.google.com",
+      "StartPage": "homepage"
+    },
+    "OverrideFirstRunPage": "",
+    "OverridePostUpdatePage": ""
+  }
+}
