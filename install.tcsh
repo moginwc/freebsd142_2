@@ -149,6 +149,8 @@ pkg install -y -q p5-Image-ExifTool
 mkdir ~/Pictures
 convert ./colorbar1.svg ~/Pictures/colorbar1.png
 convert ./colorbar2.svg ~/Pictures/colorbar2.png
+convert ./colorbar3.svg ~/Pictures/colorbar3.png
+convert ./colorbar4.svg ~/Pictures/colorbar4.png
 
 # 12-6.外付けHDDに、ファイル・ディレクトリを指定してバックアップを取りたい
 cp ./.backup_config ~
