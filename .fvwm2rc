@@ -33,7 +33,7 @@ DestroyFunc Func-LaunchOrRaise_chrome
 AddToFunc Func-LaunchOrRaise_chrome
 + I Next (Chromium-browser) Raise
 + I Next (Chromium-browser) Focus
-+ I None (Chromium-browser) Exec chrome
++ I None (Chromium-browser) Exec chrome --no-default-browser-check
 
 # ランチャー(mlterm) 起動またはフォーカスする
 DestroyFunc Func-LaunchOrRaise_mlterm
