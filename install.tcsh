@@ -143,7 +143,7 @@ mkdir ~/.mozc
 pkg install -y -q xsxiv
 chmod +x ~/.config/nsxiv/exec/image-info
 chmod +x ~/.config/nsxiv/exec/key-handler
-pkg install -y -q p5-Image-ExifTool
+sudo pkg install -y -q p5-Image-ExifTool
 
 # サンプル画像のコピー
 mkdir ~/Pictures
