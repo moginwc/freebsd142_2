@@ -140,17 +140,17 @@ mkdir ~/.mozc
 /usr/local/bin/xxd -r -p ./.mozc/config1.bin > ~/.mozc/config1.db
 
 # 8-14.サムネイル一覧から画像を選択して表示したい (nsxiv)
-pkg install -y -q xsxiv
+pkg install -y -q nsxiv
 chmod +x ~/.config/nsxiv/exec/image-info
 chmod +x ~/.config/nsxiv/exec/key-handler
 sudo pkg install -y -q p5-Image-ExifTool
 
 # サンプル画像のコピー
 mkdir ~/Pictures
-convert ./colorbar1.svg ~/Pictures/colorbar1.png
-convert ./colorbar2.svg ~/Pictures/colorbar2.png
-convert ./colorbar3.svg ~/Pictures/colorbar3.png
-convert ./colorbar4.svg ~/Pictures/colorbar4.png
+magick ./colorbar1.svg ~/Pictures/colorbar1.png
+magick ./colorbar2.svg ~/Pictures/colorbar2.png
+magick ./colorbar3.svg ~/Pictures/colorbar3.png
+magick ./colorbar4.svg ~/Pictures/colorbar4.png
 
 # 12-6.外付けHDDに、ファイル・ディレクトリを指定してバックアップを取りたい
 cp ./.backup_config ~
