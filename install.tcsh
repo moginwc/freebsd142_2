@@ -140,7 +140,7 @@ mkdir ~/.mozc
 /usr/local/bin/xxd -r -p ./.mozc/config1.bin > ~/.mozc/config1.db
 
 # 8-14.サムネイル一覧から画像を選択して表示したい (nsxiv)
-pkg install -y -q nsxiv
+sudo pkg install -y -q nsxiv
 chmod +x ~/.config/nsxiv/exec/image-info
 chmod +x ~/.config/nsxiv/exec/key-handler
 sudo pkg install -y -q p5-Image-ExifTool
