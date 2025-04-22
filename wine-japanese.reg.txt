@@ -30,3 +30,6 @@ Windows Registry Editor Version 5.00
 "メイリオ"="Noto Sans CJK JP"
 "游ゴシック"="Noto Sans CJK JP"
 "游明朝"="Noto Serif CJK JP"
+
+' 追加
+"SimSun"="Ume P Mincho"
