@@ -24,8 +24,8 @@ sed -i '' 's/^"CaptionWidth"=.*/"CaptionWidth"="-270"/'                     ~/.w
 
 # 共通の設定を行う - ウィンドウマネージャがウィンドウを装飾するのを許可するのチェックを外す
 sudo pkg install -y ja-nkf
-nkf -W8 -w16L -Lw ./wine-common_settings.reg.txt > ./wine-common_settings.reg
-regedit /s ./wine-common_settings.reg
+#保留#　nkf -W8 -w16L -Lw ./wine-common_settings.reg.txt > ./wine-common_settings.reg
+#保留#　regedit /s ./wine-common_settings.reg
 
 # 秀丸のサイレントインストール
 sudo pkg install -y cabextract # 秀丸のインストーラーの実態は.cabファイル
