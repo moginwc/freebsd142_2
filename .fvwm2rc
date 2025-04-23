@@ -105,10 +105,9 @@ Style * MaxWindowSize 100 100
 # ダイアログやポップアップウィンドウに対し、装飾・重なり順・フォーカス動作を制御する
 # - DecorateTransient: ダイアログにタイトルバーなどの装飾を表示
 # - StackTransientParent: ダイアログが親ウィンドウの上に表示されるようにする
-# - !FPGrabFocusTransient: ダイアログ表示時にフォーカスを奪わない
 # - FPReleaseFocusTransient: ダイアログが閉じたらフォーカスを親に戻す
 Style * DecorateTransient, StackTransientParent
-Style * !FPGrabFocusTransient, FPReleaseFocusTransient
+Style * FPReleaseFocusTransient
 
 #----------------------------------------------------------------------
 # 3: カラーセット
