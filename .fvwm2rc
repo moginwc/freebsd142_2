@@ -100,7 +100,7 @@ Style * ResizeOpaque
 Style * MaxWindowSize 100 100
 
 # wineにおいて、ダイアログボックス表示後に元の画面にフォーカスが戻らないのを防止する
-wine#Style * Lenience
+#wine#Style * Lenience
 
 # ダイアログやポップアップウィンドウに対し、装飾・重なり順・フォーカス動作を制御する
 # - DecorateTransient: ダイアログにタイトルバーなどの装飾を表示
