@@ -96,11 +96,19 @@ Style *        Icon programs.png
 OpaqueMoveSize unlimited
 Style * ResizeOpaque
 
-# ウインドウが画面からはみ出さないように調整する
+# ウインドウが画面からはみ出さないように調整する(効果不明)
 Style * MaxWindowSize 100 100
 
 # wineにおいて、ダイアログボックス表示後に元の画面にフォーカスが戻らないのを防止する
-#wine#Style * Lenience
+wine#Style * Lenience
+
+# ダイアログやポップアップウィンドウに対し、装飾・重なり順・フォーカス動作を制御する
+# - DecorateTransient: ダイアログにタイトルバーなどの装飾を表示
+# - StackTransientParent: ダイアログが親ウィンドウの上に表示されるようにする
+# - !FPGrabFocusTransient: ダイアログ表示時にフォーカスを奪わない
+# - FPReleaseFocusTransient: ダイアログが閉じたらフォーカスを親に戻す
+Style * DecorateTransient, StackTransientParent
+Style * !FPGrabFocusTransient, FPReleaseFocusTransient
 
 #----------------------------------------------------------------------
 # 3: カラーセット
