@@ -70,7 +70,7 @@ DeskTopSize 1x1
 Style * ClickToFocus, MouseFocusClickRaises
 
 # ウインドウタイトルなどのフォント
-DefaultFont "xft:Sans:size=12"
+DefaultFont "xft:IPAPgothic:size=12"
 
 # RDP接続の際にウインドウが選択できなくなるのを防止する
 IgnoreModifiers L25
@@ -137,7 +137,7 @@ MenuStyle * BorderWidth 1
 MenuStyle * Hilight3DThickness -1
 
 # ルートメニューのフォント
-MenuStyle * Font "xft:Sans:size=12"
+MenuStyle * Font "xft:IPAPgothic:size=12"
 
 # ルートメニューの配色
 MenuStyle * MenuColorset 5, ActiveColorset 6, GreyedColorset 7, TitleColorset 8
@@ -278,8 +278,8 @@ ButtonStyle 6 AllInActive  Vector 5 35x60@3 65x60@3 65x50@3 35x50@3 35x60@3
 
 # ウインドウシステムの終了
 *QuitVerifyGrabServer
-*QuitVerifyFont         xft:Sans:size=12
-*QuitVerifyButtonFont   xft:Sans:size=12
+*QuitVerifyFont         xft:IPAPgothic:size=12
+*QuitVerifyButtonFont   xft:IPAPgothic:size=12
 *QuitVerifyFore         Black
 *QuitVerifyBack         #cecece
 *QuitVerifyItemFore     Black
