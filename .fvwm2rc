@@ -175,7 +175,7 @@ AddToMenu Programs    "プログラム"                      Title
 +                     ""                                Nop
 +                     "ウェブブラウザ..."               Exec firefox
 ##+                     "ウェブブラウザ Firefox..."       Exec firefox
-##+                     "ウェブブラウザ Chromium..."      Exec chrome
+##+                     "ウェブブラウザ Chromium..."      Exec chrome --no-default-browser-check
 
 AddToMenu Utilities   "ユーティリティ"                  Title
 +                     "再表示"                          Refresh
