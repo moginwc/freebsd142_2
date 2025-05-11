@@ -21,7 +21,7 @@ Q. 今後もFreeBSDを使っていきますか。
 A. 今のところその予定です。
 
 Q. もしLinuxを使うなら、どのディストリビューションを選びますか。
-A. MIRACLE LINUX、Linux Mintなど。
+A. MIRACLE LINUX、Oracle Linux、Linux Mintなど。
 
 Q. 似たようなアプリが複数ある場合、どのような採用基準で選んでいますか。
 A. 個人的にフィーリングが合うものを選んでいますが、次の項目も参考にしています。
