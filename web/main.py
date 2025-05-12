@@ -25,7 +25,7 @@ def init_db():
             status TEXT NOT NULL
         )''')
 
-# メイン
+# スタート
 @app.on_event("startup")
 def startup_event():
     init_db()
