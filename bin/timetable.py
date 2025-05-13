@@ -39,10 +39,10 @@ for dest, h, m in schedule:
 schedule_dt.sort(key=lambda x: x[1])
 
 #----------
-# 画面設定
+# 画面設定(1366x768モニター専用)
 #----------
 
-# ウインドウ回りの設定(1366x768モニター専用)
+# ウインドウ回りの設定
 root = tk.Tk()
 root.title("発車案内")
 root.geometry("1366x768")
