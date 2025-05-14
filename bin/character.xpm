@@ -7,7 +7,7 @@ static char *XPM_X[] = {
 "w  c #ffffff",     /* 白目 */
 "b  c #000000",     /* 黒目・輪郭 */
 "r  c #ff6666",     /* 赤い口 */
-  /* pixels */
+/* pixels */
 ". . s s s s . . ",
 ". s s s s s s . ",
 "s s w b b w s s ",
