@@ -7,8 +7,8 @@ class DotCharacterApp:
         self.root.title("ドット絵キャラ移動")
 
         # Canvasのサイズ
-        self.canvas_width = 224 * 2
-        self.canvas_height = 288 * 2
+        self.canvas_width = 448
+        self.canvas_height = 576
 
         # Canvas作成
         self.canvas = tk.Canvas(root, width=self.canvas_width, height=self.canvas_height, bg="white")
