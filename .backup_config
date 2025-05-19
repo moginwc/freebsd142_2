@@ -7,7 +7,7 @@ usr/local/etc/X11/xorg.conf.d/vmmouse.conf
 etc/gettytab
 etc/ttys
 etc/motd.template
-etc/motd.template.old
+etc/motd.template.org
 boot.config
 boot/loader.conf
 etc/wpa_supplicant.conf
