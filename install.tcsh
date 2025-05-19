@@ -8,7 +8,7 @@ sudo cp ./etc_ntp.conf /etc/ntp.conf
 sudo service powerd enable
 
 # グラフィックドライバーのインストール (3.初期設定 グラフィックドライバー)
-sudo pkg install -y -q drm-515-kmod
+sudo pkg install -y -q drm-510-kmod
 sudo sysrc kld_list+=i915kms
 sudo pw groupmod video -m pcuser
 
@@ -48,7 +48,7 @@ sudo pkg install -y -q mlterm
 cp -r ./.mlterm ~
 
 # 入力メソッド・日本語入力システムのインストールと設定 (3.初期設定 日本語入力1,2)
-sudo pkg install -y -q ja-uim-anthy uim-gtk2 uim-gtk3 uim-qt5 uim-qt6
+sudo pkg install -y -q ja-uim-anthy uim-gtk uim-gtk3 uim-qt5
 cp -r ./.xkb ~
 
 # 入力メソッド・日本語入力システムの初期設定 (3.初期設定 日本語入力3相当)
