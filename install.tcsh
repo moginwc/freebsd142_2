@@ -187,6 +187,9 @@ cp ant_tower.scad ~
 # 7-5.FreeBSDから、Windowsにリモートデスクトップ経由で接続したい
 sudo pkg install -y -q freerdp
 
+# 7-7.FreeBSDから、MacにVNC接続したい
+sudo pkg install -y -q tigervnc-viewer
+
 # 5-8.再起動時に/tmpフォルダーをクリアーしたい
 sudo sysrc clear_tmp_enable="YES"
 
