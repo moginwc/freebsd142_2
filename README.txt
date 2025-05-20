@@ -23,7 +23,7 @@ Wineのインストールをお急ぎの方は、引き続き下記を実行し�
 
 ステップ１．pcuser でログインする。
 ステップ２．% cd freebsd142_2
-ステップ３．% tcsh ./install_wine.tcsh
+ステップ３．% tcsh -x ./install_wine.tcsh
 　　　　　　（秀丸エディタ、WinMerge、Binary Editor BZもインストールされます。
 　　　　　　　途中、何かフォルダーのようなものが表示されますが、閉じてください）
 ステップ４．いったんログアウトし、再度ログインする
