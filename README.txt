@@ -12,8 +12,8 @@ https://moginwc.sakura.ne.jp/FreeBSD142InstallGuide2.pdf
 ステップ４．pcuser でログインする。
 ステップ５．% git clone https://github.com/moginwc/freebsd142_2 を実行する。
 ステップ６．% cd freebsd142_2
-ステップ７．% tcsh ./install.tcsh
-　　　　　　(sudoのパスワード、および最後にファイル共有smbのパスワード入力があります)
+ステップ７．% tcsh -x ./install.tcsh
+　　　　　　(sudoのパスワード入力、および最後にファイル共有smbのパスワード入力があります)
 ステップ８．% sudo shutdown -r now
 ステップ９．144ページ以降を参照。
 
