@@ -16,3 +16,5 @@ usr/local/etc/smb4.conf
 usr/local/lib/firefox/defaults/pref/autoconfig.js
 usr/local/lib/firefox/autoconfig.cfg
 usr/local/share/ghostscript/10.04.0/Resource/Init/cidfmap
+etc/pkg/FreeBSD.conf
+usr/local/etc/pkg/repos/quarterly.conf
