@@ -6,7 +6,7 @@ https://moginwc.sakura.ne.jp/FreeBSD142InstallGuide2.pdf
 インストールをお急ぎの方は、下記を実行してください。
 
 ステップ１．FreeBSD 14.2 インストール&設定メモ 2025-05-XX 第9版 の
-　　　　　　29〜74P（sudoを設定する）までを実行する。
+　　　　　　29〜74ページ（sudoを設定する）までを実行する。
 ステップ２．# pkg install -y git を実行する。
 ステップ３，# exit でログアウトする。
 ステップ４．pcuser でログインする。
