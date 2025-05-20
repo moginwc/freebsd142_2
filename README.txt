@@ -19,7 +19,7 @@ https://moginwc.sakura.ne.jp/FreeBSD142InstallGuide2.pdf
 
 --------
 
-Wine関係のインストールをお急ぎの方は、引き続き下記を実行してください。
+Wineのインストールをお急ぎの方は、引き続き下記を実行してください。
 
 ステップ１．pcuser でログインする。
 ステップ２．% cd freebsd142_2
