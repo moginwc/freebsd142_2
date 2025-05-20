@@ -11,6 +11,19 @@ https://moginwc.sakura.ne.jp/FreeBSD142InstallGuide2.pdf
 ステップ４．pcuser でログインする。
 ステップ５．% git clone https://github.com/moginwc/freebsd142_2 を実行する。
 ステップ６．% cd freebsd142_2
-ステップ７．% tcsh ./install.tcsh (sudoのパスワード、および最後にファイル共有smbのパスワード入力があります)
+ステップ７．% tcsh ./install.tcsh
+　　　　　　(sudoのパスワード、および最後にファイル共有smbのパスワード入力があります)
 ステップ８．% sudo shutdown -r now
 ステップ９．144ページ以降を参照。
+
+--------
+
+Wine関係のインストールをお急ぎの方は、引き続き下記を実行してください。
+
+ステップ１．pcuser でログインする。
+ステップ２．% cd freebsd142_2
+ステップ３．% tcsh ./install_wine.tcsh
+　　　　　　（秀丸エディタ、WinMerge、Binary Editor BZもインストールされます。
+　　　　　　　途中、何かフォルダーのようなものが表示されますが、閉じてください）
+
+[EOF]
