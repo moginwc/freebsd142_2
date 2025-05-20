@@ -29,9 +29,9 @@ sudo pkg install -y ja-nkf
 
 # 秀丸のサイレントインストール
 sudo pkg install -y cabextract # 秀丸のインストーラーの実態は.cabファイル
-fetch https://hide.maruo.co.jp/software/bin/hm944_x64_signed.exe
+fetch https://hide.maruo.co.jp/software/bin/hm946_x64_signed.exe
 mkdir hidemaru
-cabextract -d ./hidemaru hm944_x64_signed.exe
+cabextract -d ./hidemaru hm946_x64_signed.exe
 wine ./hidemaru/hmsetup.exe /h # /hがサイレントインストールオプション
 
 # 秀丸アイコンの抽出
