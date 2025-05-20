@@ -1,0 +1,21 @@
+ffmpeg -f video4linux2 -i /dev/video0 -vframes 1 snapshot.jpg
+
+ffmpeg -f video4linux2 –framerate 30 -i /dev/video0 -ss 3 -vframes 1 –y snapshot.jpg
+
+ffmpeg -f video4linux2 –framerate 30 -i /dev/video0 -vf "fps=1" snapshot_%04d.jpg
+
+ffmpeg -f video4linux2 -framerate 30 -i /dev/video0 \
+  -vf "fps=1, \
+  drawtext=fontfile=/usr/local/share/fonts/ipa/ipag.otf: \
+  text='%{localtime}': fontcolor=white: fontsize=24: box=1: \
+  boxcolor=black@0.5: x=w-tw-8: y=h-th-8" \
+  snapshot_%05d.jpg
+
+ffmpeg -f video4linux2 –framerate 15 -i /dev/video0 -t 00:00:30 \
+  output.mp4
+
+ffmpeg -f video4linux2 -framerate 15 -i /dev/video0 -t 00:00:30 \
+  -vf "drawtext=fontfile=/usr/local/share/fonts/ipa/ipag.otf: \
+  text='%{localtime}': fontcolor=white: fontsize=24: box=1: \
+  boxcolor=black@0.5: x=w-tw-8: y=h-th-8" \
+  output.mp4
