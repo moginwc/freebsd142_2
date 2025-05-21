@@ -155,7 +155,7 @@ magick ./colorbar4.svg ~/Pictures/colorbar4.png
 # 12-6.外付けHDDに、ファイル・ディレクトリを指定してバックアップを取りたい
 cp ./.backup_config ~
 cp ./.backup_exclude_config ~
-sudo pkg install -y rsync
+sudo pkg install -y -q rsync
 
 # 9-13.GTK系アプリのデフォルトフォントを変更したい
 cp ./.gtkrc-2.0 ~
