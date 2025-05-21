@@ -21,7 +21,7 @@ https://moginwc.sakura.ne.jp/FreeBSD142InstallGuide2.pdf
 
 Wineのインストールをお急ぎの方は、引き続き下記を実行してください。
 
-ステップ１．pcuser でログインする。
+ステップ１．pcuser でログインし、startxする。
 ステップ２．% cd freebsd142_2
 ステップ３．% tcsh -x ./install_wine.tcsh
 　　　　　　（秀丸エディタ、WinMerge、Binary Editor BZもインストールされます。
