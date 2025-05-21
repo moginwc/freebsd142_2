@@ -1,4 +1,4 @@
-# FreeBSD 14.2 の設定ファイル(※作成中)
+# FreeBSD 14.2 の設定ファイル
 
 FreeBSD 14.2 インストール&設定メモ 2025-05-XX 第9版 に対応
 https://moginwc.sakura.ne.jp/FreeBSD142InstallGuide2.pdf
